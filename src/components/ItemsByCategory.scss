@@ -1,0 +1,11 @@
+.category {
+  margin: 30px 20px;
+  text-align: center;
+  .category-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+}

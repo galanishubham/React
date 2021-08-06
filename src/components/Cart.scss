@@ -1,0 +1,10 @@
+.cart {
+  margin: 10px 20px;
+  .cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+}

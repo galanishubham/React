@@ -1,0 +1,12 @@
+.product-category {
+  margin: 30px 20px;
+  text-align: center;
+
+  .product-category-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+}
