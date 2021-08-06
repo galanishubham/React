@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { useStateValue } from "./StateProvider";
 
 function CardItem({ id, image, title, price, category = null, description }) {
-  const [dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",

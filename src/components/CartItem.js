@@ -4,7 +4,7 @@ import { useStateValue } from "./StateProvider";
 import "./CartItem.scss";
 
 function CartItem({ id, image, title, price }) {
-  const [dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   return (
     <>
