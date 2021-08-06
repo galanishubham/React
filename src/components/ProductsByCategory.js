@@ -12,7 +12,7 @@ function ProductsByCategory({ category }) {
       .then((res) => {
         setProduct(res.data);
       });
-  }, []);
+  }, [category]);
   return (
     <div className="product-category">
       <h2>Check out these EPIC {category} Products!</h2>

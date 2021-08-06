@@ -26,7 +26,7 @@ function ItemsByCategory() {
       <div className="category-items">
         {category.map((category, index) => (
           <Link to={`/category/${category}`}>
-            <CardItem key={index} image={items[index]} category={category} />
+            <CardItem key={category} image={items[index]} category={category} />
           </Link>
         ))}
       </div>
