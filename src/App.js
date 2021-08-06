@@ -12,10 +12,8 @@ function App() {
       <Router>
         <Navbar />
 
-        {/* Define router using switch */}
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* passing parameter to route */}
           <Route path="/category/:category" component={Category} />
           <Route path="/products" component={Products} />
           <Route path="/checkout" component={Checkout} />

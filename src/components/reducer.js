@@ -8,11 +8,8 @@ export const getBasketTotal = (basket) =>
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_BASKET":
-      console.log("reducer", state);
-
       return {
         ...state,
-        // include whatever we have in current basket and add new item
         basket: [...state.basket, action.item],
       };
     case "REMOVE_FROM_BASKET":

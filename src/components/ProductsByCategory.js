@@ -1,11 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import CardItem from "./CardItem";
 import "./ProductsByCategory.scss";
 
 function ProductsByCategory({ category }) {
-  //   const { category } = useParams();
   const [products, setProduct] = useState([]);
 
   useEffect(() => {
@@ -13,7 +11,6 @@ function ProductsByCategory({ category }) {
       .get(`https://fakestoreapi.com/products/category/${category}`)
       .then((res) => {
         setProduct(res.data);
-        console.log("products by category", res.data);
       });
   }, []);
   return (

@@ -4,7 +4,6 @@ import { Button } from "./Button";
 import { useStateValue } from "./StateProvider";
 
 function CardItem({ id, image, title, price, category = null, description }) {
-  // importing or using basket varible from the state and call add to basket action using dispatch
   const [{ basket }, dispatch] = useStateValue();
   const addToBasket = () => {
     dispatch({
@@ -24,12 +23,7 @@ function CardItem({ id, image, title, price, category = null, description }) {
     <>
       <div className="cards-item-container">
         <div className="cards-item-wrapper">
-          <img
-            className="cards-item__img"
-            src={image}
-            alt="Product"
-            // src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-          />
+          <img className="cards-item__img" src={image} alt="Product" />
           {category === null ? (
             <>
               <div className="cards-item__title">{title}</div>

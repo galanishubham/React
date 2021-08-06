@@ -11,8 +11,6 @@ function TopProducts() {
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products?limit=6").then((res) => {
       setProduct(res.data);
-      console.log("All products", res.data);
-      // console.log("products", products);
     });
   }, []);
 

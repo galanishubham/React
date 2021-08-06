@@ -17,7 +17,6 @@ function ItemsByCategory() {
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products/categories").then((res) => {
       setCategory(res.data);
-      console.log(res.data);
     });
   }, []);
 
