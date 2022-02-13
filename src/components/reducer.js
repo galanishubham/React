@@ -1,5 +1,6 @@
 export const initialState = {
   basket: [],
+  whislist: [],
 };
 
 export const getBasketTotal = (basket) =>
@@ -22,6 +23,23 @@ const reducer = (state, action) => {
       return {
         ...state,
         basket: [],
+      };
+
+    case "ADD_TO_WHISLIST":
+      return {
+        ...state,
+        whislist: [...state.whislist, action.item],
+      };
+    case "REMOVE_FROM_WHISLIST":
+      return {
+        ...state,
+        whislist: state.whislist.filter((item) => item.id !== action.id),
+      };
+
+    case "CLEAR_WHISLIST":
+      return {
+        ...state,
+        whislist: [],
       };
 
     default:
